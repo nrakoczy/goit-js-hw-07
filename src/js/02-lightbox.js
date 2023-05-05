@@ -3,9 +3,9 @@ import { galleryItems } from "./gallery-items.js";
 // Change code below this line
 
 
-const galleryContainer = document.querySelector(".gallery");
+const galleryEL = document.querySelector(".gallery");
 
-const galleryMarkup = galleryItems
+const galleryView = galleryItems
 	.map((item) => {
 		return `<li>
     <a class="gallery__item" href="${item.original}">
@@ -18,7 +18,7 @@ const galleryMarkup = galleryItems
 	})
 	.join("");
 
-galleryContainer.insertAdjacentHTML("beforeend", galleryMarkup);
+galleryEL.insertAdjacentHTML("beforeend", galleryView);
 
 const imageFromLightbox = new SimpleLightbox(".gallery a", {
 	captionsData: "alt",
